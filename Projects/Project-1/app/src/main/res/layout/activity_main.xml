@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/black" >
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTodoItems"
@@ -20,6 +21,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter To-Do Title "
+        android:textColor="@color/ic_launcher_todolist_background"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAddTodo"
         app:layout_constraintStart_toStartOf="parent" />
@@ -29,6 +32,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add To-Do"
+        android:paddingRight="-1dp"
+        android:paddingLeft="-1dp"
+        android:layout_marginRight="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnDeleteDoneTodos" />
 
@@ -37,6 +43,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delete Done"
+        android:paddingRight="-1dp"
+        android:paddingLeft="-1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
