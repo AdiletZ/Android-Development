@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.to_dolist.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
@@ -21,8 +22,28 @@ class MainActivity : AppCompatActivity() {
 //        lateinit var binding: ActivityMainBinding
 
         super.onCreate(savedInstanceState)
+//        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
+//        val sharedPref = getSharedPreferences("myPref", MODE_PRIVATE)
+//        val editor = sharedPref.edit()
         todoAdapter = TodoAdapter(mutableListOf())
+
+//        binding.apply {
+//            findViewById<Button>(R.id.btnSaveTodos).setOnClickListener {
+//                val saveData = findViewById<TextView>(R.id.item_todo).text.toString()
+//
+//                editor.apply {
+//                    putString("saveData", saveData)
+//                    apply()
+//                }
+//            }
+//
+//            findViewById<Button>(R.id.btnLoadTodos).setOnClickListener {
+//                val saveData = sharedPref.getString("saveData", null)
+//
+//                findViewById<TextView>(R.id.item_todo).text = saveData
+//            }
+//        }
 
         findViewById<RecyclerView>(R.id.rvTodoItems).adapter = todoAdapter
         findViewById<RecyclerView>(R.id.rvTodoItems).layoutManager = LinearLayoutManager(this)
