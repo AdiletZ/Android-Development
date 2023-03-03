@@ -23,7 +23,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Enter To-Do Title "
-        android:textColor="@color/ic_launcher_todolist_background"
+        android:textColor="@color/white"
         android:textColorHint="#FFFFFF"
         android:paddingLeft="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
